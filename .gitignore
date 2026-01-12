@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Diffusion ignore
+DIFFUSION/LFP/data/
+DIFFUSION/LFP/data_for_generated/
+DIFFUSION/LFP/generated_data/
+DIFFUSION/LFP/output/
+DIFFUSION/LFP/checkpoints/
+DIFFUSION/LFP/__pycache__/
