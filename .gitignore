@@ -207,10 +207,25 @@ marimo/_lsp/
 __marimo__/
 
 
-# Diffusion ignore
+# ===============================
+# LFP (Diffusion) ignores
+# ===============================
+
+# VSCode settings
+DIFFUSION/LFP/.vscode/
+
+# Python cache
+DIFFUSION/LFP/__pycache__/
+
+# Data (raw / processed / generated)
 DIFFUSION/LFP/data/
 DIFFUSION/LFP/data_for_generated/
 DIFFUSION/LFP/generated_data/
-DIFFUSION/LFP/output/
+
+# Training outputs
 DIFFUSION/LFP/checkpoints/
-DIFFUSION/LFP/__pycache__/
+DIFFUSION/LFP/output/
+DIFFUSION/LFP/output copy/
+
+# Visualization results
+DIFFUSION/LFP/comparison_visualizations/
