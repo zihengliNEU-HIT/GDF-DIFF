@@ -1,2 +1,2 @@
 # GDF-DIFF
-Official implementation of "GDF-Diff: Generative Diffusion for Battery Health Prognosis with Only 100mV Random Fragments under Data Missing"
+Official implementation of "Conditional Generative Diffusion Enables Ultra-Fast Battery Health Estimation from Random 100mV Charging Fragments"
