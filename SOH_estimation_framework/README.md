@@ -152,4 +152,4 @@ generated_folder = "./data_generated/random"
 
 **Note:** 
 - `truedata_folder = "./original"` remains unchanged for all runs
-- Each run generates CSV files: `batteryXX_test_Generated.csv` for generated data and `batteryXX_test_True.csv` for original data
+- Each run generates CSV files with two columns: the first column is true SOH values, the second column is predicted SOH values. `batteryXX_test_True.csv` contains predictions from original test data, while `batteryXX_test_Generated.csv` contains predictions from generated data.
