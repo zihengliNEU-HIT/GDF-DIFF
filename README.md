@@ -31,37 +31,33 @@ The dataset will be made publicly available on Zenodo upon acceptance and formal
 GDF-DIFF/
 ├── Diffusion_framework/
 │   ├── LFP/
-│   │   ├── data/                    # Train/validation/test datasets
-│   │   ├── data_for_generated/      # Test set for reverse diffusion (generates structured .mat files)
-│   │   ├── generated_data/          # Generated .mat outputs
-│   │   ├── checkpoints/             # Trained model weights
-│   │   └── output/                  # Visualization results and evaluation metrics
+│   │   ├── data/                        # Train/validation/test datasets
+│   │   ├── data_for_generated/          # Test set for reverse diffusion (generates structured .mat files)
+│   │   ├── generated_data/              # Generated .mat outputs
+│   │   ├── checkpoints/                 # Trained model weights
+│   │   ├── output/                      # Visualization results and evaluation metrics
+│   │   ├── GDF_data_processed.py        # Data preprocessing script
+│   │   ├── GDF_train.py                 # Model training script
+│   │   ├── GDF_test.py                  # Model testing and evaluation
+│   │   ├── GDF_Reverse_diffusion.py     # Reverse diffusion sampling (.mat version of test script)
+│   │   ├── GDF_diffusion_model.py       # Integrated diffusion model (combines forward/reverse processes)
+│   │   ├── GDF_Unet.py                  # U-Net backbone implementation
+│   │   ├── GDF_gaussian_diffusion.py    # Complete diffusion process (forward and reverse functions)
+│   │   ├── GDF_visualization.py         # Result visualization tools
+│   │   ├── GDF_main.py                  # Main execution script
+│   │   └── README.md
 │   ├── NCM/                         
-│   │   ├── type1/                   # NCM battery type 1
+│   │   ├── type1/                       # NCM battery type 1 (same structure as LFP)
 │   │   │   ├── data/
 │   │   │   ├── data_for_generated/
 │   │   │   ├── generated_data/
 │   │   │   ├── checkpoints/
-│   │   │   └── output/
-│   │   └── type2/                   # NCM battery type 2
-│   │       ├── data/
-│   │       ├── data_for_generated/
-│   │       ├── generated_data/
-│   │       ├── checkpoints/
-│   │       └── output/
-│   └── NCA/                         # Same structure as LFP
-│       ├── data/
-│       ├── data_for_generated/
-│       ├── generated_data/
-│       ├── checkpoints/
-│       └── output/
-├── GDF_data_processed.py            # Data preprocessing script
-├── GDF_train.py                     # Model training script
-├── GDF_test.py                      # Model testing and evaluation
-├── GDF_Reverse_diffusion.py         # Reverse diffusion sampling (.mat version of test script)
-├── GDF_diffusion_model.py           # Integrated diffusion model (combines forward/reverse processes)
-├── GDF_Unet.py                      # U-Net backbone implementation
-├── GDF_gaussian_diffusion.py        # Complete diffusion process (forward and reverse functions)
-├── GDF_visualization.py             # Result visualization tools
+│   │   │   ├── output/
+│   │   │   ├── GDF_*.py                 # All GDF scripts
+│   │   │   └── README.md
+│   │   └── type2/                       # NCM battery type 2 (same structure as type1)
+│   │       └── ...
+│   └── NCA/                             # Same structure as LFP
+│       └── ...
 └── README.md
 ```
