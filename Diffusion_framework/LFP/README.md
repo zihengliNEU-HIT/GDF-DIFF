@@ -77,3 +77,28 @@ For a complete list of parameters, run:
 ```bash
 python GDF_main.py --help
 ```
+### Reverse Diffusion (Generate Structured .mat Files)
+
+To generate complete battery cycle data as structured .mat files (using LFP as an example), run:
+```bash
+cd Diffusion_framework/LFP
+python GDF_Reverse_diffusion.py --checkpoint_path ./checkpoints/model_epoch_60.pt
+```
+
+**Key parameters (adjustable):**
+- `--checkpoint_path`: Path to the trained model checkpoint (e.g., `./checkpoints/model_epoch_60.pt`)
+- `--batch_size`: Batch size for generation (default: 32)
+- `--ddim_steps`: Number of DDIM sampling steps (default: 50)
+
+**Example with custom parameters:**
+```bash
+cd Diffusion_framework/LFP
+python GDF_Reverse_diffusion.py \
+  --checkpoint_path ./checkpoints/model_epoch_60.pt \
+  --batch_size 64 \
+  --ddim_steps 100
+```
+
+**Output:** This script generates complete battery cycle GAF images in .mat format, selecting the best PSNR fragment for each cycle. Results are saved in `./generated_data/` by default.
+
+**For other battery chemistries:** Navigate to the corresponding directory (e.g., `Diffusion_framework/NCM/type1` or `Diffusion_framework/NCA`) and run the same commands.
