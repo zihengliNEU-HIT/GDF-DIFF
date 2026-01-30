@@ -61,3 +61,76 @@ GDF-DIFF/
 │       └── ...
 └── README.md
 ```
+
+**For `SOH_estimation_framework/` folder:** The dataset on Zenodo has a **different structure** from this repository. To use the dataset:
+
+**Extract and replace folders from Zenodo dataset one chemistry at a time:**
+
+From Zenodo's complete structure:
+```
+dataset/SOH_estimation_framework/
+├── LFP/
+│   ├── data/
+│   ├── data_generated/
+│   ├── models/
+│   └── original/
+├── NCM/
+│   ├── type1/
+│   │   ├── data/
+│   │   ├── data_generated/
+│   │   ├── models/
+│   │   └── original/
+│   └── type2/
+│       ├── data/
+│       ├── data_generated/
+│       ├── models/
+│       └── original/
+└── NCA/
+    ├── data/
+    ├── data_generated/
+    ├── models/
+    └── original/
+```
+
+**Replace into this repository (one at a time):**
+
+For **LFP**:
+- Replace `dataset/SOH_estimation_framework/LFP/data/` → `SOH_estimation_framework/data/`
+- Replace `dataset/SOH_estimation_framework/LFP/data_generated/` → `SOH_estimation_framework/data_generated/`
+- Replace `dataset/SOH_estimation_framework/LFP/models/` → `SOH_estimation_framework/models/`
+- Replace `dataset/SOH_estimation_framework/LFP/original/` → `SOH_estimation_framework/original/`
+
+For **NCM type1**:
+- Replace `dataset/SOH_estimation_framework/NCM/type1/data/` → `SOH_estimation_framework/data/`
+- Replace `dataset/SOH_estimation_framework/NCM/type1/data_generated/` → `SOH_estimation_framework/data_generated/`
+- Replace `dataset/SOH_estimation_framework/NCM/type1/models/` → `SOH_estimation_framework/models/`
+- Replace `dataset/SOH_estimation_framework/NCM/type1/original/` → `SOH_estimation_framework/original/`
+
+For **NCM type2**:
+- Replace `dataset/SOH_estimation_framework/NCM/type2/data/` → `SOH_estimation_framework/data/`
+- Replace `dataset/SOH_estimation_framework/NCM/type2/data_generated/` → `SOH_estimation_framework/data_generated/`
+- Replace `dataset/SOH_estimation_framework/NCM/type2/models/` → `SOH_estimation_framework/models/`
+- Replace `dataset/SOH_estimation_framework/NCM/type2/original/` → `SOH_estimation_framework/original/`
+
+For **NCA**:
+- Replace `dataset/SOH_estimation_framework/NCA/data/` → `SOH_estimation_framework/data/`
+- Replace `dataset/SOH_estimation_framework/NCA/data_generated/` → `SOH_estimation_framework/data_generated/`
+- Replace `dataset/SOH_estimation_framework/NCA/models/` → `SOH_estimation_framework/models/`
+- Replace `dataset/SOH_estimation_framework/NCA/original/` → `SOH_estimation_framework/original/`
+
+**Repository Structure:**
+```
+GDF-DIFF/
+└── SOH_estimation_framework/
+    ├── data/                        # Battery cycling data (replace for each chemistry)
+    ├── data_generated/              # Generated features for SOH estimation (replace for each chemistry)
+    ├── models/                      # Trained model checkpoints (replace for each chemistry)
+    ├── original/                    # Original/reference data (replace for each chemistry)
+    ├── data_preprocess.py           # Data preprocessing script
+    ├── model.py                     # SOH estimation model architecture
+    ├── train_and_test.py            # Model training and testing
+    ├── test_and_output.py           # Testing and result output
+    └── README.md
+```
+
+**Note:** Run experiments separately for each battery chemistry by replacing the `data/`, `data_generated/`, `models/`, and `original/` folders before each run.
