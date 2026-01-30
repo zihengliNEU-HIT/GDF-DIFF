@@ -24,7 +24,7 @@ The dataset will be made publicly available on Zenodo upon acceptance and formal
 - Replace `Diffusion_framework/LFP/generated_data/` with dataset's `Diffusion_framework/LFP/generated_data/`
 - Replace `Diffusion_framework/LFP/output/` with dataset's `Diffusion_framework/LFP/output/`
 - Replace `Diffusion_framework/LFP/checkpoints/` with dataset's `Diffusion_framework/LFP/checkpoints/` (optional, for pre-trained models)
-- Repeat the same for `NCM/` and `NCA/` folders
+- Repeat the same for `NCM/type1/`, `NCM/type2/`, and `NCA/` folders
 
 **Repository Structure:**
 ```
@@ -36,12 +36,19 @@ GDF-DIFF/
 │   │   ├── generated_data/          # Generated .mat outputs
 │   │   ├── checkpoints/             # Trained model weights
 │   │   └── output/                  # Visualization results and evaluation metrics
-│   ├── NCM/                         # Same structure as LFP
-│   │   ├── data/
-│   │   ├── data_for_generated/
-│   │   ├── generated_data/
-│   │   ├── checkpoints/
-│   │   └── output/
+│   ├── NCM/                         
+│   │   ├── type1/                   # NCM battery type 1
+│   │   │   ├── data/
+│   │   │   ├── data_for_generated/
+│   │   │   ├── generated_data/
+│   │   │   ├── checkpoints/
+│   │   │   └── output/
+│   │   └── type2/                   # NCM battery type 2
+│   │       ├── data/
+│   │       ├── data_for_generated/
+│   │       ├── generated_data/
+│   │       ├── checkpoints/
+│   │       └── output/
 │   └── NCA/                         # Same structure as LFP
 │       ├── data/
 │       ├── data_for_generated/
